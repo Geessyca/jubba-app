@@ -56,6 +56,10 @@ document.querySelector(" .button-login").addEventListener("click", function () {
     else {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
+        myHeaders.append('Access-Control-Allow-Origin','*')
+        myHeaders.append('Access-Control-Allow-Methods','POSTS')
+        myHeaders.append('Access-Control-Request-Method','*')
+        myHeaders.append('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type, Accept, Authorization')
         var raw = JSON.stringify({
             "username": username,
             "password": senha
@@ -69,16 +73,15 @@ document.querySelector(" .button-login").addEventListener("click", function () {
         };
 
         fetch("http://localhost:8080/api/auth/signin", requestOptions)
-            .then(response => {
-                if (response.status == 200) {
-                    console.log(response)
-                    result = JSON.parse(response)
+            .then(response => response.text())
+            .then(result => {
+                result = JSON.parse(result)
+                if (result.username ) {
                     window.localStorage.setItem("token", `${result.username}_${result.id}_${result.email}`)
                     window.location.href = "/jubba-app"
                 } else {
-                    console.log(response)
                     document.getElementById("geralinfo").innerText = "Nome de usuário ou senha invalidos"
-                  
+
                 }
             })
             .catch(error => console.log('error', error));
