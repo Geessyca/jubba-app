@@ -56,7 +56,6 @@ document.querySelector(" .button-login").addEventListener("click", function () {
     else {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append('Access-Control-Allow-Origin', '*');
         var raw = JSON.stringify({
             "username": username,
             "password": senha
