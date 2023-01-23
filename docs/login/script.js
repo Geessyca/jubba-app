@@ -56,7 +56,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
     else {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-
+        myHeaders.append('Access-Control-Allow-Origin', '*');
         var raw = JSON.stringify({
             "username": username,
             "password": senha
@@ -77,7 +77,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
                     window.location.href = "/jubba-app"
                 } else {
                     console.log(response)
-                    document.getElementById("geralinfo").innerText = "E-mail ou senha invalidos"
+                    document.getElementById("geralinfo").innerText = "Nome de usuário ou senha invalidos"
                   
                 }
             })
