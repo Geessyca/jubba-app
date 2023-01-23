@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+     font-family: 'Poppins' !important;
+font-style: normal;
+}
+.login{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.left{
+  display: flex;
+  align-items: center;
+    flex-direction: column;
+    
+    justify-content: center;
+  width: 50%;
+}
+.right{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+  background: #FFB81C;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+.back{
+  cursor: pointer;
+  position: absolute;
+  top:15px ;
+  left: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #FFB81C;
+  display: flex;
+  align-items: center;
+}
+.back img{
+  margin-right: 5px;
+}
+.logo{
+  width: 50%;
+}
+h4{
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+}
+.input label{
+    font-weight: 600;
+  font-size: 20px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+.input input, .forminputcaptcha{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 15px 15px 15px;
+  border: none;
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+}
+div#captcha {
+    width: 310px;
+    
+}
+.captchaform{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 15px 15px;
+  background-color: #FFFFFF;
+  padding: 5px;
+}
+.captchaform input{
+  width: 250px;
+  box-shadow:none;
+  padding: 0;
+}
+.preview {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+            margin: 15px 0 -10px;
+        letter-spacing: -6px;
+        font-size: 30px;
+        font-style: oblique;
+        text-decoration: line-through;
+        background-color: #FFFFFF;
+    }
+  button.captcharefersh {
+    width: 40px;
+    height: 40px;
+    background: #FFB81C;
+    border: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.error {
+    color: red;
+    font-size: 15px;
+}
+.info{
+  margin:15px 0;
+}
+.info-link{
+    cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+.button-login{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45px;
+  color: #FFB81C;
+  border: none;
+  margin-left: 15px;
+  width: 215px;
+  height: 50px;
+    cursor: pointer;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+}
+.info div{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px){
+  .login{
+    height: auto;
+    flex-direction: column;
+  }
+  .left {
+    padding: 60px 0 40px;
+    width: 100%;
+}
+.right {
+    width: 100%;
+}
+}

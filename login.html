@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./login/style.css">
+	<script src="./login/script.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+	<section class="login">
+	<section class="left">
+		<a class="back" id="home" href=""><img src="./login/Arrow 1.svg" /> Voltar para a página inicial</a>
+		<img src="./login/logo.png"  class="logo"/>
+	</section>
+	<section class="right">
+		<h4>Acesse sua conta</h4>
+		<span id="geralinfo" class="error"></span>
+		<div class="input"><label>E-mail</label><input type="email" required id="email" /><span id="emailinfo" class="error"></span></div>
+		<div class="input"><label>Senha</label><input type="password" required id="senha" /><span id="senhainfo" class="error"></span></div>
+		<div id="captcha" class="formdiv">
+			<div class="preview"></div>
+			<div class="captchaform">
+				<input type="text" id="captchaform" class="forminputcaptcha" placeholder=" ">
+				<button class="captcharefersh">
+					<i class="fa fa-refresh"></i>
+				</button>
+			</div>
+			<span class="error" id="captchainfo"></span>
+		</div>
+		<div class="info">
+			<div>
+				<a class="info-link" id="esqueci-minha-senha" href="">Esqueci minha senha</a>
+				<a class="info-link" id="cadastro" href="">Ainda não sou cadastrado</a>
+			</div>
+			<button class="button-login" type="submit">Login</button>
+		</div>
+	</section>
+	</section>
+
+</body>
+</html>

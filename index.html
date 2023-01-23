@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./home/style.css" rel="stylesheet" type="text/css" />
+    <link href="./header/style.css" rel="stylesheet" type="text/css" />
+    <title>Jubba</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./header/jubba-logo_auto_x2-removebg-preview.png" />
+        <div class="search">
+            <select id="select">
+                <option value="all">Região</option>
+            </select>
+            <input placeholder="Serviço" id="service"/>
+            <button class="lupa" id="search"><img src="./header/lupa.svg" /></button>
+        </div>
+        <div class="links">
+          
+            <a href="" id="cadastro">Registre-se</a>
+            </br>
+            <a href=""id="login">Login</a>
+        </div>
+    </header>
+    <section class="home"></section>
+    <section class="servicos">
+        <div class="servico">
+            <a id="cabelo" href=""><img src="./home/cabelo.png" /></a>
+        </div>
+        <div class="servico">
+            <a id="pele" href=""><img src="./home/pele.png"  /></a>
+        </div>
+        <div class="servico">
+            <a id="unha" href=""><img src="./home/unha.png"  /></a>
+        </div>
+    </section>
+    <section class="quemsomos">
+        <img src="./home/quemsomos.svg"/>
+        <div>Jubba facilita a procura de agendamentos com os profissionais locais de beleza. Encontre seu lugar
+        favorito ou descubra novos estabelecimentos através do nosso aplicativo.</div>
+    </section>
+    <section class="comofunciona">
+        <div>Procurando seu próximo serviço a ser agendado na barbearia, no cabeleireiro, na massagista ou na manicure? Precisa
+        agendar um horário para fazer a barba, tirar as sobrancelhas ou fazer uma massagem?
+    Jubba torna fácil e prático o processo de encontrar estabelecimentos,
+    profissionais, serviços e realizar a marcação das reservas. Reserve a qualquer hora, em qualquer lugar, 24 horas por
+    dia, 7 dias por semana.</div>
+        <img src="./home/comofunciona.svg"/>
+    </section>
+    <footer>
+        <link href="./footer/style.css" rel="stylesheet" type="text/css" />
+        Arthur, Camila, Gessyca, Heli, João Victor, Jonathan e Vitor
+        </br>
+        Agradecemos a visita v-0.0.1
+        </br>
+        © 2023 Jubba Inc. Todos os direitos reservados
+    </footer>
+</body>
+<script>
+    function link(page) {
+        var url = window.location.href
+        url = url.replace("index", page)
+        return url
+    }
+    window.onload = function () {
+        document.getElementById("cabelo").attributes.href.value = link("cabelo")
+        document.getElementById("pele").attributes.href.value = link("pele")
+        document.getElementById("unha").attributes.href.value = link("unha")
+    }
+</script>
+<script src="./header/script.js"></script>
+</html>

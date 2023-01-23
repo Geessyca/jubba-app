@@ -1,0 +1,80 @@
+.home{
+    background-image: url("./homepage.gif");
+        width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servicos{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin-top: -90px;
+}
+.servico{
+    display: flex;
+    flex-direction: column;
+cursor: pointer;
+margin: 0 20px;
+}
+.servico img {
+    width: 90px;
+    
+background-color: #FFB81C;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px #3a3939e8;
+    padding: 5px;
+    
+}
+.quemsomos,.comofunciona {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    
+    height: 50vh;
+
+}
+.quemsomos div, .comofunciona div {
+    width: 50%;
+            font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+text-align: center;
+  color: #424242;
+  text-align: end;
+      padding: 30px;
+}
+.quemsomos img, .comofunciona img {
+        width: 50vh;
+    object-position: center;
+    margin: auto;
+
+}
+@media screen and (max-width: 600px){
+    .servico img{
+        width: 50px;
+    }
+    .servicos{
+        margin-top: -55px;
+
+    }
+    
+    .quemsomos, .comofunciona{
+        flex-direction: column;
+        height: auto;
+    }
+    .quemsomos{
+        flex-direction: column-reverse;
+    }
+.quemsomos div, .comofunciona div {
+    width: 100%;
+    font-size: 15px;
+}
+}
