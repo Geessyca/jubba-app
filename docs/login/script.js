@@ -72,6 +72,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
         fetch("http://localhost:8080/api/auth/signin", requestOptions)
             .then(response => {
                 if (response.status == 200) {
+                    console.log(response)
                     result = JSON.parse(response)
                     window.localStorage.setItem("token", `${result.username}_${result.id}_${result.email}`)
                     window.location.href = "/jubba-app"
