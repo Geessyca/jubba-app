@@ -1,15 +1,5 @@
 window.onload = function () {
 
-    function linklogin(page) {
-        var url = window.location.href
-        window.location.hash= ""
-        url = url.replace("recuperar-senha", page)
-        url = url.replace("#", "")
-        return url
-    }
-    document.getElementById("home").attributes.href.value = linklogin("index")
-    document.getElementById("login").attributes.href.value = linklogin("login")
-    document.getElementById("cadastro").attributes.href.value = linklogin("cadastro")
 
     document.querySelector(" .button-esqueci-minha-senha").addEventListener("click", function () {
     let senha = document.getElementById("senha").value;
@@ -37,11 +27,11 @@ window.onload = function () {
             fetch(`http://localhost:8080/api/auth/forgotpassword/${token}`, requestOptions)
                 .then(response => {if(response.status == 200){ document.querySelector(".right").innerHTML = `<h4>Senha alterada com sucesso!</h4>`; 
                     setTimeout(() => {
-                        window.location.href = linklogin("login")
+                        window.location.href = "/jubba-app/login"
                     }, 2000);
                 } else{document.querySelector(".right").innerHTML = `<h4>Algo deu errado tente novamente</h4>`
                 setTimeout(() => {
-                    window.location.href = linklogin("esqueci-minha-senha")
+                    window.location.href = "/jubba-app/esqueci-minha-senha"
                 }, 2000);} })
 
             .catch(error => console.log('error', error));

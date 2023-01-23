@@ -1,13 +1,6 @@
 window.onload = function () {
 
-    function linklogin(page) {
-        var url = window.location.href
-        url = url.replace("esqueci-minha-senha", page)
-        return url
-    }
-    document.getElementById("home").attributes.href.value = linklogin("index")
-    document.getElementById("login").attributes.href.value = linklogin("login")
-    document.getElementById("cadastro").attributes.href.value = linklogin("cadastro")
+
 
     document.querySelector(" .button-esqueci-minha-senha").addEventListener("click", function () {
     let email = document.getElementById("email").value;
@@ -43,7 +36,7 @@ window.onload = function () {
                 if (response.status == 200) {
                     document.querySelector(".right").innerHTML = `<h4>Enviamos o email de recuperação para ${email}. Acesse-o para recuperar sua senha!</h4>`
                     setTimeout(() => {
-                        window.location.href = linklogin("index")
+                        window.location.href = "/jubba-app"
                     }, 2000);
                 } else {
                     document.querySelector(".right").innerHTML = `<h4>Algo deu errado tente novamente</h4>`

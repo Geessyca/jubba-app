@@ -1,17 +1,8 @@
 window.onload = function () {
     if (window.localStorage.getItem("token")){
-        var home = window.location.href
-        home = home.replace("login", "index")
-        window.location.href = home
+        window.location.href = "/jubba-app"
     }
-    function linklogin(page) {
-        var url = window.location.href
-        url = url.replace("login", page)
-        return url
-    }
-    document.getElementById("home").attributes.href.value = linklogin("index")
-    document.getElementById("esqueci-minha-senha").attributes.href.value = linklogin("esqueci-minha-senha")
-    document.getElementById("cadastro").attributes.href.value = linklogin("cadastro")
+   
 const fonts = ["cursive"];
 let captchaValue = "";
 function gencaptcha() {
@@ -83,7 +74,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
                 if (response.status == 200) {
                     result = JSON.parse(response)
                     window.localStorage.setItem("token", `${result.username}_${result.id}_${result.email}`)
-                    window.location.href = linklogin("index")
+                    window.location.href = "/jubba-app"
                 } else {
                     console.log(response)
                     document.getElementById("geralinfo").innerText = "E-mail ou senha invalidos"

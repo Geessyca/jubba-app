@@ -20,21 +20,21 @@
         </div>
         <div class="links">
           
-            <a href="" id="cadastro">Registre-se</a>
+            <a href="/cadastro" id="cadastro">Registre-se</a>
             </br>
-            <a href=""id="login">Login</a>
+            <a href="/login"id="login">Login</a>
         </div>
     </header>
     <section class="home"></section>
     <section class="servicos">
         <div class="servico">
-            <a id="cabelo" href=""><img src="./home/cabelo.png" /></a>
+            <a id="cabelo" href="/cabelo"><img src="./home/cabelo.png" /></a>
         </div>
         <div class="servico">
-            <a id="pele" href=""><img src="./home/pele.png"  /></a>
+            <a id="pele" href="/pele"><img src="./home/pele.png"  /></a>
         </div>
         <div class="servico">
-            <a id="unha" href=""><img src="./home/unha.png"  /></a>
+            <a id="unha" href="/unha"><img src="./home/unha.png"  /></a>
         </div>
     </section>
     <section class="quemsomos">
@@ -59,17 +59,5 @@
         © 2023 Jubba Inc. Todos os direitos reservados
     </footer>
 </body>
-<script>
-    function link(page) {
-        var url = window.location.href
-        url = url.replace("index", page)
-        return url
-    }
-    window.onload = function () {
-        document.getElementById("cabelo").attributes.href.value = link("cabelo")
-        document.getElementById("pele").attributes.href.value = link("pele")
-        document.getElementById("unha").attributes.href.value = link("unha")
-    }
-</script>
 <script src="./header/script.js"></script>
 </html>
