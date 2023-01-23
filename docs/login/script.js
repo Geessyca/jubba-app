@@ -38,13 +38,13 @@ initCaptcha();
 
 document.querySelector(" .button-login").addEventListener("click", function () {
     let inputcaptchavalue = document.querySelector(" #captcha input").value;
-    let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
     let senha = document.getElementById("senha").value;
-    document.getElementById("emailinfo").innerText = ""
+    document.getElementById("usernameinfo").innerText = ""
     document.getElementById("senhainfo").innerText = ""
     document.getElementById("captchainfo").innerText = ""
-    if (email == "" && !email.includes("@")) {
-        document.getElementById("emailinfo").innerText = "E-mail inválido"
+    if (username == "" ) {
+        document.getElementById("usernameinfo").innerText = "E-mail inválido"
     }
     if (inputcaptchavalue != captchaValue) {
         document.getElementById("captchainfo").innerText = "Captcha inválido"
@@ -58,7 +58,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
         myHeaders.append("Content-Type", "application/json");
 
         var raw = JSON.stringify({
-            "username": email,
+            "username": username,
             "password": senha
         });
 

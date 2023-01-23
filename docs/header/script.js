@@ -21,16 +21,10 @@ window.onload = function () {
     }
     if (window.localStorage.getItem("token")) {
         document.getElementById("cadastro").innerText = "Olá, " + window.localStorage.getItem("token").split("_")[0]
-        document.getElementById("cadastro").attributes.href.value = ""
         document.getElementById("login").innerText = "Sair"
-        document.getElementById("login").attributes.href.value = ""
         document.getElementById("login").addEventListener("click", function () {
             window.localStorage.removeItem("token")
         })
-    }
-    else {
-        document.getElementById("cadastro").attributes.href.value = link("cadastro")
-        document.getElementById("login").attributes.href.value = link("login")
     }
     for(var i=0;i<cidades.length;i++){
         document.getElementById("select").insertAdjacentHTML("beforeend", `<option value='${cidades[i].nome}'>${cidades[i].nome}</option>`)
