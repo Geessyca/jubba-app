@@ -12,7 +12,10 @@ window.onload = function () {
         document.querySelector(".right").innerHTML = `<h4 class='loading'><i class="fa fa-spinner fa-pulse" style="font-size: 45px;"></i></h4>`
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-
+            myHeaders.append('Access-Control-Allow-Origin', '*')
+            myHeaders.append('Access-Control-Allow-Methods', 'POSTS')
+            myHeaders.append('Access-Control-Request-Method', '*')
+            myHeaders.append('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
         var raw = JSON.stringify({
             "password": senha
         });

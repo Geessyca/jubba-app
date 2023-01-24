@@ -58,7 +58,7 @@ cursor: pointer;
 .links{
     text-align: center;
 }
-.links a{
+.links a, #exit{
     font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
