@@ -12,12 +12,11 @@ cidades = [
     }
      
 ]
-
-window.onload = function () {
+function tokenName(){
     var token = window.localStorage.getItem("token")
     if (token) {
         document.getElementById("cadastro").innerText = "Olá, " + token.split("_")[0]
-        document.getElementById("login").style.display="none"
+        document.getElementById("login").style.display = "none"
         document.getElementById("exit").style.display = ""
 
         document.getElementById("exit").addEventListener("click", function () {
@@ -40,19 +39,26 @@ window.onload = function () {
             };
 
             fetch("http://localhost:8080/api/auth/signout", requestOptions)
-                .then(response => {if(response.status == 200){window.localStorage.removeItem("token");setTimeout(() => {
-                    window.location.reload()
-                }, 2000);}})
+                .then(response => {
+                    if (response.status == 200) {
+                        window.localStorage.removeItem("token"); setTimeout(() => {
+                            window.location.reload()
+                        }, 2000);
+                    }
+                })
                 .catch(error => console.log('error', error));
-            
+
         })
     }
-    else{
+    else {
         document.getElementById("login").style.display = ""
         document.getElementById("exit").style.display = "none"
 
 
     }
+}
+window.onload = function () {
+    tokenName()
     for(var i=0;i<cidades.length;i++){
         document.getElementById("select").insertAdjacentHTML("beforeend", `<option value='${cidades[i].nome}'>${cidades[i].nome}</option>`)
 
