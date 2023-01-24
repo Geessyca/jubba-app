@@ -14,13 +14,9 @@ cidades = [
 ]
 
 window.onload = function () {
-    function link(page) {
-        var url = window.location.href
-        url = url.replace("index", page)
-        return url
-    }
-    if (window.localStorage.getItem("token")) {
-        document.getElementById("cadastro").innerText = "Olá, " + window.localStorage.getItem("token").split("_")[0]
+    var token = window.localStorage.getItem("token")
+    if (token) {
+        document.getElementById("cadastro").innerText = "Olá, " + token.split("_")[0]
         document.getElementById("login").style.display="none"
         document.getElementById("exit").style.display = ""
 
