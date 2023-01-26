@@ -24,7 +24,8 @@ function saloespage(){
     var select = document.getElementById("select");
     var city = select.options[select.selectedIndex].value.replaceAll(" ", "");
     var search = city.toLowerCase()
-    if (search == "all") {
+    var opt = ["congonhas", "conselheirolafaiete","ourobranco"]
+    if (!opt.includes(search)) {
         window.location.href = "/jubba-app/saloes"
     }
     else {
