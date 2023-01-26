@@ -8,7 +8,7 @@ function create(){
     document.getElementById("emailinfo").innerText = ""
     document.getElementById("senhainfo").innerText = ""
     var ok = true
-    if (username.length < 6 || username == "" || username.includes("_") ) {
+    if (username.length < 3 || username == "" || username.includes("_") ) {
         document.getElementById("usernameinfo").innerText = "Nome de usuário inválido"
         ok=false
     }

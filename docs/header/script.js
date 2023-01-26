@@ -12,13 +12,15 @@ cidades = [
     }
      
 ]
+
 function tokenName(){
     var token = window.localStorage.getItem("token")
     if (token != null) {
+        window.localStorage.setItem("name", token.split("_")[0])
         document.getElementById("cadastro").innerText = "Olá, " + token.split("_")[0]
         document.getElementById("login").style.display = "none"
         document.getElementById("exit").style.display = ""
-        document.getElementById("cadastro").attributes.href.value ="/jubba-app/minha-conta"
+        document.getElementById("cadastro").attributes.href.value ="/jubba-app/minha-conta#agendamentos"
         document.getElementById("exit").addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -66,6 +68,15 @@ window.onload = function () {
         var select = document.getElementById("select");
         var city = select.options[select.selectedIndex].value.replaceAll(" ","");
         var search = city.toLowerCase()
-        window.location.href ="/jubba-app/saloes#"+search
+        if (search == "all"){
+            window.location.href = "/jubba-app/saloes.html"
+        }
+        else{
+            window.location.href = "/jubba-app/saloes.html#" + search
+        }
+        setTimeout(() => {
+
+            window.location.reload()
+        }, 100);
     })
 }

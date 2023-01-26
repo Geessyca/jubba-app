@@ -96,14 +96,19 @@ function save(){
     let email = document.getElementById("email").value;
     document.getElementById("usernameinfo").innerText = ""
     document.getElementById("emailinfo").innerText = ""
+    document.getElementById("phoneinfo").innerText = ""
     var ok = true
-    if (username.length < 6 || username == "" || username.includes("_")) {
-        document.getElementById("usernameinfo").innerText = "E-mail inválido"
+    if (username.length < 3 || username == "" || username.includes("_")) {
+        document.getElementById("usernameinfo").innerText = "Nome inválido"
         ok=false
     }
     if (!email.includes("@") || email == "") {
         document.getElementById("emailinfo").innerText = "E-mail inválido"
         ok=false
+    }
+    if (phone.length < 10 || phone == "" ) {
+        document.getElementById("phoneinfo").innerText = "Telefone inválido"
+        ok = false
     }
     if(ok){
         var myHeaders = new Headers();
@@ -124,16 +129,15 @@ function save(){
         var id = window.localStorage.getItem("token").split("_")[1]
         fetch(`http://localhost:8080/api/auth/user-edit/${id}`, requestOptions)
             
-                .then(response => response.text())
-                    .then(result => {
-                        result = JSON.parse(result)
-                        if (result.id == id) {
-                            window.localStorage.setItem("token", `${result.username}_${result.id}_${result.email}`)
-                            window.location.reload()
-
-                        }
-                    })
-                    .catch(error => console.log('error', error));
+        .then(response => response.text())
+            .then(result => {
+                setTimeout(() => {
+                    window.localStorage.setItem("token", `${username}_${id}_${email}`)
+                    window.location.reload()
+                }, 100);
+})
+        .catch(error => console.log('error', error));
+                    
         
     }
 }

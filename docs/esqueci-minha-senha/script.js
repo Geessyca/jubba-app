@@ -12,7 +12,7 @@ window.onload = function () {
         document.getElementById("emailinfo").innerText = "E-mail inválido"
         ok=false
     }
-    if (username.length < 6 || username == "") {
+    if (username.length < 3 || username == "") {
         document.getElementById("usernameinfo").innerText = "Nome inválido"
         ok=false
     }
