@@ -82,7 +82,7 @@ document.querySelector(" .button-login").addEventListener("click", function () {
                 result = JSON.parse(result)
                 if (result.username ) {
                     window.localStorage.setItem("token", `${result.username}_${result.id}_${result.email}`)
-                    window.location.href = "/jubba-app"
+                    window.history.back();
                 } else {
                     document.getElementById("geralinfo").innerText = "Nome de usuário ou senha invalidos"
 

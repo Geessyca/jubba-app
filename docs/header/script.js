@@ -18,22 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("select").insertAdjacentHTML("beforeend", `<option value='${cidades[i].nome}'>${cidades[i].nome}</option>`)
 
     }
-    document.getElementById("search").addEventListener("click", function () {
-        var select = document.getElementById("select");
-        var city = select.options[select.selectedIndex].value.replaceAll(" ", "");
-        var search = city.toLowerCase()
-        if (search == "all") {
-            window.location.href = "/jubba-app/saloes"
-        }
-        else {
-            window.location.href = "/jubba-app/saloes#" + search
-        }
-        setTimeout(() => {
-
-            window.location.reload()
-        }, 100);
-    })
+    
 });
+function saloespage(){
+    var select = document.getElementById("select");
+    var city = select.options[select.selectedIndex].value.replaceAll(" ", "");
+    var search = city.toLowerCase()
+    if (search == "all") {
+        window.location.href = "/jubba-app/saloes"
+    }
+    else {
+        window.location.href = "/jubba-app/saloes#" + search
+    }
+    setTimeout(() => {
+        window.location.reload()
+    }, 100);
+}
 function tokenName(){
     var token = window.localStorage.getItem("token")
     if (token != null) {
