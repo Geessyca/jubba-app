@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function tokenName(){
     var token = window.localStorage.getItem("token")
     if (token != null) {
-        window.localStorage.setItem("name", token.split("_")[0])
         document.getElementById("cadastro").innerText = "Olá, " + token.split("_")[0]
         document.getElementById("login").style.display = "none"
         document.getElementById("exit").style.display = ""

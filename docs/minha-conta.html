@@ -12,7 +12,8 @@
 </head>
 <body style="display:none;">
      <header>
-        <img class="logo" src="./header/jubba-logo_auto_x2-removebg-preview.png" />
+            <a href="/jubba-app"><img class="logo" src="./header/jubba-logo_auto_x2-removebg-preview.png" /></a>
+
         <div class="search">
             <select id="select">
                 <option value="all">Região</option>
@@ -51,6 +52,7 @@
                 <div class="item-detalhe"><div><label>Nome de usuário</label><input type="text" id="username"/><span id="usernameinfo"></span></div><div><label>Telefone</label><input type="text" id="phone"/><span id="phoneinfo"></span></div></div>
                 <div class="item-detalhe"><div><label>E-mail</label><input type="email" id="email"/><span id="emailinfo"></span></div></div>
                 <div class="item-detalhe"><label>A senha da sua conta pode ser alterada através do  <a href="/jubba-app/esqueci-minha-senha">link</a></label></div>
+                <div class="item-detalhe" style="font-size: 15px; cursor: pointer !important; color:#FFB81C"><label onclick="deleteuser()" style="cursor: pointer !important;">Deletar conta</a></label></div>
                 <button class="detalhe-salvar" onclick="save()">Salvar alterações</button>
             </div>
         </section>

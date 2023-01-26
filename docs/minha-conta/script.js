@@ -141,6 +141,18 @@ function save(){
         
     }
 }
+function deleteuser(){
+    id = window.localStorage.getItem("token").split("_")[1]
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+
+    fetch(`http://localhost:8080/api/auth/user-delete/${id}`, requestOptions)
+        .then(response => response.text())
+        .then(result => {window.location.reload();window.localStorage.removeItem("token")})
+        .catch(error => console.log('error', error));
+}
 var agend = []
 function agendamentos(){
     window.location.hash = "#agendamentos"
