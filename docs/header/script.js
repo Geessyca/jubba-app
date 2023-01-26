@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
         var city = select.options[select.selectedIndex].value.replaceAll(" ", "");
         var search = city.toLowerCase()
         if (search == "all") {
-            window.location.href = "/jubba-app/saloes.html"
+            window.location.href = "/jubba-app/saloes"
         }
         else {
-            window.location.href = "/jubba-app/saloes.html#" + search
+            window.location.href = "/jubba-app/saloes#" + search
         }
         setTimeout(() => {
 
