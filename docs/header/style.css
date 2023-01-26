@@ -18,6 +18,28 @@ header{
 .logo{
     height: 80px;
 }
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+    border-left: 1px solid #fff
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #FFB81C
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #FFB81C
+}
 select {
   outline: 0;
   border-width: 2px 0px 2px 2px;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./cadastro/style.css">
+    <script src="./cadastro/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <section class="cadastro">
+        <section class="left">
+            <a class="back" id="home" href="/jubba-app"><img src="./cadastro/Arrow 1.svg" /> Voltar para a página
+                inicial</a>
+        </section>
+        <section class="right">
+            <div class="beneficios">
+                <h4 class="bene">Benefícios de ter uma conta Jubba</h4>
+                <p class="benef">Além de ter acesso aos melhores profissionais por região, você pode agendar e fazer o pagamento direto da sua casa, sem
+                surpresas e sua única preocupação será ficar deslumbrante!</p>
+                <img src="./cadastro/logo.png" class="logo" /></div>
+            <div class="formulario">
+                <span id="geralinfo" class="error"></span>
+                <div class="input"><label>Nome de usuário</label><input type="text" required id="username" /><span id="usernameinfo"
+                        class="error"></span></div>
+                <div class="input"><label>Telefone</label><input type="phone" required id="telefone" /><span id="telefoneinfo"
+                        class="error"></span></div>
+                <div class="input"><label>E-mail</label><input type="email" required id="email" /><span id="emailinfo"
+                        class="error"></span></div>
+                <div class="input"><label>Senha</label><input type="password" required id="senha" /><span id="senhainfo"
+                        class="error"></span></div>
+                <div class="info">
+                    <button class="button-cadastro" type="submit" onclick="create()">Cadastrar</button>
+                    <a class="info-link" id="login" href="/jubba-app/login">Já sou cadastrado</a>
+                    
+                </div>
+            </div>
+          
+           
+        </section>
+    </section>
+
+</body>
+
+</html>

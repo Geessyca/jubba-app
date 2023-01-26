@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+     font-family: 'Poppins' !important;
+font-style: normal;
+}
+.cadastro{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+.left{
+  display: flex;
+  align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  height: 8vh;
+}
+.right{
+  display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 92vh;
+    justify-content: space-around;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+.back{
+  cursor: pointer;
+  position: absolute;
+  top:15px ;
+  left: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #FFB81C;
+  display: flex;
+  align-items: center;
+}
+.back img{
+  margin-right: 5px;
+}
+.logo{
+  width: 200px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+}
+.input label{
+    font-weight: 500;
+  font-size: 18px;
+  line-height: 45px;
+  color: #FFB81C;
+}
+.formulario{
+        width: 45%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.bene{
+    font-weight: 700;
+font-size: 20px;
+line-height: 45px;
+color: #FFB81C;
+}
+.benef{font-weight: 400;
+font-size: 18px;
+line-height: 38px;
+text-align: center;
+
+color: #121212;}
+.input input, .forminputcaptcha{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 15px 15px 15px;
+  border: none;
+  width: 450px;
+  height: 40px;
+  padding: 5px;
+}
+.beneficios {
+    width: 45%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error {
+    color: red;
+    font-size: 15px;
+}
+.info{
+  margin:15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-link{
+    cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #FFB81C;
+}
+.button-cadastro{
+  background: #FFB81C;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 45px;
+  color: #FFFFFF;
+  border: none;
+  width: 450px;
+  height: 50px;
+    cursor: pointer;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+}
+.info div{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 600px){
+  .cadastro{
+    height: auto;
+    flex-direction: column;
+  }
+  .left {
+    padding: 60px 0 40px;
+    width: 100%;
+}
+.right {
+    width: 100%;
+}
+}

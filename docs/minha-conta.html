@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="./header/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./minha-conta/style.css" rel="stylesheet" type="text/css" />
+    <script src="./minha-conta/script.js"></script>
+    <title>Minha Conta</title>
+</head>
+<body style="display:none;">
+     <header>
+        <img class="logo" src="./header/jubba-logo_auto_x2-removebg-preview.png" />
+        <div class="search">
+            <select id="select">
+                <option value="all">Região</option>
+            </select>
+            <button class="lupa" id="search" style="margin-left: 5px;"><img src="./header/lupa.svg" /></button>
+        </div>
+        <div class="links">
+          
+            <a href="/jubba-app/cadastro" id="cadastro">Registre-se</a>
+            </br>
+            <a href="/jubba-app/login"id="login">Login</a>
+            <a id="exit" style="display:none">Sair</a>
+        </div>
+    </header>
+    <section class="minha-conta">
+        <section class="top"></section>
+        <section class="medium">
+            <button class="options-account" onclick="agendamentos()"><i class="fa fa-address-book-o" aria-hidden="true" ></i>
+ Agendamentos</button>
+            <button class="options-account" onclick="detalhes()"><i class="fa fa-cogs" aria-hidden="true" ></i>
+ Detalhes da conta</button>
+            <button  class="options-account"id="exit" onclick="exit()"><i class="fa fa-sign-out" aria-hidden="true" ></i>
+ Sair</button>
+        </section>
+        <section class="bottom">
+            <div class="loading" id="loading"style="display:flex;    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center; color:#FFB81C"><span id="infoloading"></span><i class="fa fa-spinner fa-pulse" style="font-size: 45px;"></i></div>
+            <div id="agendamentos"style="display:none">
+               
+            </div>
+            <div id="semage" style="display:none;    justify-content: center;
+              
+                align-items: center; color:#FFB81C">Sem agendamentos</div>
+            <div id="detalhes" style="display:none">
+                <div class="item-detalhe"><div><label>Nome de usuário</label><input type="text" id="username"/><span id="usernameinfo"></span></div><div><label>Telefone</label><input type="text" id="phone"/></div></div>
+                <div class="item-detalhe"><div><label>E-mail</label><input type="email" id="email"/><span id="emailinfo"></span></div></div>
+                <div class="item-detalhe"><label>A senha da sua conta pode ser alterada através do  <a href="/jubba-app/esqueci-minha-senha">link</a></label></div>
+                <button class="detalhe-salvar" onclick="save()">Salvar alterações</button>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <link href="./footer/style.css" rel="stylesheet" type="text/css" />
+        Arthur, Camila, Gessyca, Heli, João Victor, Jonathan e Vitor
+        </br>
+        Agradecemos a visita v-0.0.1
+        </br>
+        © 2023 Jubba Inc. Todos os direitos reservados
+    </footer>
+</body>
+
+<script src="./header/script.js"></script>
+</html>

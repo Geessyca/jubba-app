@@ -43,17 +43,21 @@ document.querySelector(" .button-login").addEventListener("click", function () {
     document.getElementById("usernameinfo").innerText = ""
     document.getElementById("senhainfo").innerText = ""
     document.getElementById("captchainfo").innerText = ""
+    var ok = true
     if (username == "" ) {
-        document.getElementById("usernameinfo").innerText = "E-mail inválido"
+        document.getElementById("usernameinfo").innerText = "Nome de usuário inválido"
+        ok=false
     }
     if (inputcaptchavalue != captchaValue) {
         document.getElementById("captchainfo").innerText = "Captcha inválido"
+        ok=false
     }
     if (senha.length < 6 || senha == "") {
         document.getElementById("senhainfo").innerText = "Senha inválida"
+        ok=false
     }
     
-    else {
+    if(ok) {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append('Access-Control-Allow-Origin','*')

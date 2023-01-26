@@ -1,0 +1,91 @@
+
+.saloes {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+}
+.salao{
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 2px solid #a8a8a7;
+}
+.salao:last-child{
+    border-bottom: none ;
+}
+.infomacoes {
+    width: 30%;
+    box-shadow: 0px 0px 4px #3a3a39;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
+}
+.infomacoes img {
+    width: 100%;
+    border-radius: 15px;
+    
+}
+.loading {
+    width: 100%;
+    display: flex;
+    color: #FFB81C;
+    height: calc(65vh + -2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.titulosalao{
+    margin: 0;
+    margin-top: -25px;
+    background-color: white;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    position: relative;
+}
+.enderecosalao{
+    margin: 0;
+    font-size: 13px;
+}
+.telefonesalao{
+    margin: 5px 0;
+    font-size: 13px;
+}
+.horarios{
+    display: grid;
+    grid-template-columns: auto  auto ;
+}
+.servicoselect{
+    box-shadow: 1px 0px 3px #1c1b1b;
+    border-color: transparent;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    min-width: 400px;
+    height: 115px;
+}
+.title{
+    text-align: center;
+}
+.title p {
+    font-size: 15px;
+    
+}
+.tiposalao {
+    margin: 0;
+    position: relative;
+    border-radius: 1px;
+    background: #FFB81C;
+    width: fit-content;
+    padding: 2px 5px;
+    margin-bottom: -22px;
+    margin-left: auto;
+    font-size: 12px;
+    padding-right: 15px;
+    right: -10px;
+    top: 10px;
+    box-shadow: -2px 0px 6px #000;
+}

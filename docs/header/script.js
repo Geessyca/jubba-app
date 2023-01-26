@@ -14,13 +14,12 @@ cidades = [
 ]
 function tokenName(){
     var token = window.localStorage.getItem("token")
-    if (token) {
+    if (token != null) {
         document.getElementById("cadastro").innerText = "Olá, " + token.split("_")[0]
         document.getElementById("login").style.display = "none"
         document.getElementById("exit").style.display = ""
-
+        document.getElementById("cadastro").attributes.href.value ="/jubba-app/minha-conta"
         document.getElementById("exit").addEventListener("click", function () {
-            console.log("click")
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append('Access-Control-Allow-Origin', '*')
@@ -65,9 +64,8 @@ window.onload = function () {
     }
     document.getElementById("search").addEventListener("click",function(){
         var select = document.getElementById("select");
-        var city = select.options[select.selectedIndex].value.replaceAll(" ","_");
-        var service= document.getElementById("service").value;
-        var search = city +"-"+service
-        console.log(search)
+        var city = select.options[select.selectedIndex].value.replaceAll(" ","");
+        var search = city.toLowerCase()
+        window.location.href ="/jubba-app/saloes#"+search
     })
 }

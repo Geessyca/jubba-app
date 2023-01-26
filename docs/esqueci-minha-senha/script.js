@@ -7,14 +7,17 @@ window.onload = function () {
     let username = document.getElementById("username").value;
     document.getElementById("emailinfo").innerText = ""
     document.getElementById("usernameinfo").innerText = ""
-        if (email == "" && !email.includes("@")) {
+    var ok = true
+    if (email == "" && !email.includes("@")) {
         document.getElementById("emailinfo").innerText = "E-mail inválido"
+        ok=false
     }
     if (username.length < 6 || username == "") {
         document.getElementById("usernameinfo").innerText = "Nome inválido"
+        ok=false
     }
     
-    else {
+    if(ok) {
         document.querySelector(".right").innerHTML = `<h4 class='loading'><i class="fa fa-spinner fa-pulse" style="font-size: 45px;"></i></h4>`
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");

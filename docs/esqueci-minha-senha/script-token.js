@@ -4,11 +4,13 @@ window.onload = function () {
     document.querySelector(" .button-esqueci-minha-senha").addEventListener("click", function () {
     let senha = document.getElementById("senha").value;
     document.getElementById("senhainfo").innerText = ""
+    var ok = true
         if (senha.length < 6 || senha == "") {
         document.getElementById("senhainfo").innerText = "Senha inválida"
+        ok=false
     }
     
-    else {
+    if(ok) {
         document.querySelector(".right").innerHTML = `<h4 class='loading'><i class="fa fa-spinner fa-pulse" style="font-size: 45px;"></i></h4>`
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
