@@ -1,1 +1,3 @@
-# jubba-app
+# Front-end
+
+/docs/index.html
