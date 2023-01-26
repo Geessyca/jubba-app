@@ -12,7 +12,28 @@ cidades = [
     }
      
 ]
+document.addEventListener("DOMContentLoaded", function () {
+    tokenName();
+    for (var i = 0; i < cidades.length; i++) {
+        document.getElementById("select").insertAdjacentHTML("beforeend", `<option value='${cidades[i].nome}'>${cidades[i].nome}</option>`)
 
+    }
+    document.getElementById("search").addEventListener("click", function () {
+        var select = document.getElementById("select");
+        var city = select.options[select.selectedIndex].value.replaceAll(" ", "");
+        var search = city.toLowerCase()
+        if (search == "all") {
+            window.location.href = "/jubba-app/saloes.html"
+        }
+        else {
+            window.location.href = "/jubba-app/saloes.html#" + search
+        }
+        setTimeout(() => {
+
+            window.location.reload()
+        }, 100);
+    })
+});
 function tokenName(){
     var token = window.localStorage.getItem("token")
     if (token != null) {
@@ -57,26 +78,4 @@ function tokenName(){
 
 
     }
-}
-window.onload = function () {
-    tokenName()
-    for(var i=0;i<cidades.length;i++){
-        document.getElementById("select").insertAdjacentHTML("beforeend", `<option value='${cidades[i].nome}'>${cidades[i].nome}</option>`)
-
-    }
-    document.getElementById("search").addEventListener("click",function(){
-        var select = document.getElementById("select");
-        var city = select.options[select.selectedIndex].value.replaceAll(" ","");
-        var search = city.toLowerCase()
-        if (search == "all"){
-            window.location.href = "/jubba-app/saloes.html"
-        }
-        else{
-            window.location.href = "/jubba-app/saloes.html#" + search
-        }
-        setTimeout(() => {
-
-            window.location.reload()
-        }, 100);
-    })
 }
